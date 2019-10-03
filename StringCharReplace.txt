@@ -41,3 +41,4 @@ FOR Counter = 1 TO LENGTH(InternationalNum)
 ENDFOR
 
 OUTPUT " Your phone number, including your country code with your desired characters replaced is: ", FixedInternationalNum
+.
