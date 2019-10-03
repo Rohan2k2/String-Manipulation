@@ -25,3 +25,4 @@ FOR Counter = 1 TO LENGTH(NumEntered)
 ENDFOR
 
 OUTPUT " Your phone number, including only numbers is: " , FixedNum
+.
