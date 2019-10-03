@@ -1,0 +1,27 @@
+DECLARE NumEntered : STRING
+DECLAR FixedNum : STRING
+DECLARE OmittedChar : CHAR
+DECLARE CurrentChar : CHAR
+DECLARE Counter : INTEGER
+
+NumEntered = ""
+FixedNum = ""
+OmittedChar = ''
+CurrentChar = ''
+Counter = 0
+
+OUTPUT "Enter your phone number: "
+INPUT NumEntered
+
+OUTPUT "Enter the characters do remove: "
+INPUT OmittedChar
+
+FOR Counter = 1 TO LENGTH(NumEntered)
+    CurrentChar = MID(NumEntered, Counter, 1)
+    IF CurrentChar <> OmittedChar
+      THEN
+        FixedNum = FixedNum & CurrentChar
+    ENDIF
+ENDFOR
+
+OUTPUT " Your phone number, including only numbers is: " , FixedNum
