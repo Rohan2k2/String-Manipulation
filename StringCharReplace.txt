@@ -1,0 +1,43 @@
+DECLARE NumEntered : STRING
+DECLAR InternationalNum : STRING
+DECLARE OmittedChar : CHAR
+DECLARE FirstChar : CHAR
+DECLARE CountryCode : STRING
+DECLARE CurrentChar : CHAR
+DECLARE Counter : INTEGER
+DECLARE FixedInternationalNum : STRING
+DECLARE ReplacedChar : CHAR
+
+NumEntered = ""
+InternationalNum = ""
+OmittedChar = ''
+CurrentChar = ''
+CountryCode = ""
+ReplacedChar = ""
+Counter = 0
+FixedInternationalNum = ""
+
+OUTPUT "Enter your phone number: "
+INPUT NumEntered
+
+OUTPUT "enter the characters to be ignored in the entered string: "
+INPUT OmittedChar
+
+OUTPUT "Enter the characters that are to replaced the ignored characters: "
+INPUT ReplacedChar
+
+OUTPUT "Enter the country code: "
+INPUT CountryCode
+
+InternationalNum = CountryCode & RIGHT(NumEntered, LENGTH(NumEntered) - Instring(NumEntered, "0")
+
+FOR Counter = 1 TO LENGTH(InternationalNum)
+    CurrentChar = MID(InternationalNum, Counter, 1)
+    IF CurrentChar = OmittedChar
+      THEN
+        CurrentChar = ReplacedChar
+    ENDIF
+    FixedInternationalNum = FixedInternationalNum & CurrentChar
+ENDFOR
+
+OUTPUT " Your phone number, including your country code with your desired characters replaced is: ", FixedInternationalNum
