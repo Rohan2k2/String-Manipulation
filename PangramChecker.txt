@@ -28,4 +28,4 @@ IF ispangram = #true#
   ELSE
     OUTPUT "the entered string is not a pangram"
 ENDIF
-    
+    .
