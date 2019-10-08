@@ -1,0 +1,23 @@
+DECLARE str : STRING
+DECLARE vovel : STRING
+DECLARE count : INTEGER
+DECLARE noofvovels : INTEGER
+
+str = ""
+vovel = "AEIOU"
+count = 0
+noofvovels = 0
+
+OUTPUT "Enter the string that you need to be checked"
+INPUT str
+
+str= UPPER(str)
+
+FOR count = 1 to LENGTH(str)
+    IF LOCATE(vovel, MID(str, count, 1)) > 0
+      THEN
+        noofvovels = noofvovels + 1     
+    ENDIF
+NEXT
+
+OUTPUT "the no of vovels in the netered string is: ", noofvovels       
