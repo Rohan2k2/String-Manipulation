@@ -1,0 +1,17 @@
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE str3 : STRING
+
+str1 = ""
+str2 = ""
+str3 = ""
+
+OUTPUT "Enter first string of 2 words: "
+INPUT str1
+
+OUTPUT "Enter second string of 2 words"
+INPUT str2
+
+str3 = LEFT(str1, LOCATE(str1, ' ')) & RIGHT(str2, LENGTH(str2) - LOCATE(str2, ' ')) 
+
+OUTPUT "the combined string is: " , str3
